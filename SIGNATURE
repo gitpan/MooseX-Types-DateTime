@@ -1,0 +1,32 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.55.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 a40693ab2b3a146958fc3d518decfb26a7decd31 Changes
+SHA1 cd833e1b49f4ae224b7b79eb09ceca2311e8ca7a MANIFEST
+SHA1 f1b9208b95a8b1e9d258efaf2460554a9956e691 MANIFEST.SKIP
+SHA1 57beae8122984b1c481730aff6645b23e5d4cf42 META.yml
+SHA1 25b00f0a315dd0db49ae147cb078d738244b94e1 Makefile.PL
+SHA1 c184ab778170c1b4919c75eb18db49518b49d459 lib/MooseX/Types/DateTime.pm
+SHA1 5943a06ceec4e385b4fc51b10ae7ac94a7460198 lib/MooseX/Types/DateTimeX.pm
+SHA1 5dc5b4e09efcee42e2a0ed87fe184e79a069caf1 t/01_basic.t
+SHA1 812772364f8f077611cf181ef367a5ca0062dd3a t/02_datetimex.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.7 (Darwin)
+
+iD8DBQFIVA/9VCwRwOvSdBgRAhViAJ99p1T5VkT01GfRy3mKQu+zm+34DACdEcK7
+XB7hz+auNCa4PPtSRRTYc4Y=
+=X7kc
+-----END PGP SIGNATURE-----

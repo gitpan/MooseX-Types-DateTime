@@ -1,0 +1,21 @@
+--- #YAML:1.0
+name:                MooseX-Types-DateTime
+version:             0.01
+abstract:            ~
+license:             ~
+author:              ~
+generated_by:        ExtUtils::MakeMaker version 6.44
+distribution_type:   module
+requires:     
+    DateTime:                      0
+    DateTime::Locale:              0
+    DateTime::TimeZone:            0
+    DateTimeX::Easy:               0.082
+    Moose:                         0.41
+    MooseX::Types:                 0.04
+    Test::Exception:               0
+    Test::use::ok:                 0
+    Time::Duration::Parse:         0.06
+meta-spec:
+    url:     http://module-build.sourceforge.net/META-spec-v1.3.html
+    version: 1.3
