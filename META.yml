@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                MooseX-Types-DateTime
-version:             0.01
+version:             0.02
 abstract:            ~
 license:             ~
 author:              ~
@@ -13,6 +13,7 @@ requires:
     DateTimeX::Easy:               0.082
     Moose:                         0.41
     MooseX::Types:                 0.04
+    namespace::clean:              0.08
     Test::Exception:               0
     Test::use::ok:                 0
     Time::Duration::Parse:         0.06

@@ -5,13 +5,16 @@ package MooseX::Types::DateTime;
 use strict;
 use warnings;
 
-our $VERSION = "0.01";
+our $VERSION = "0.02";
 
 use DateTime ();
 use DateTime::Locale ();
 use DateTime::TimeZone ();
 
 use MooseX::Types::Moose qw/Num HashRef Str/;
+
+use namespace::clean;
+
 use MooseX::Types -declare => [qw( DateTime Duration TimeZone Locale Now )];
 
 class_type "DateTime";
