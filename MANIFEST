@@ -1,3 +1,4 @@
+.gitignore
 Changes
 lib/MooseX/Types/DateTime.pm
 Makefile.PL
