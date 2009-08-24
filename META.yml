@@ -10,24 +10,19 @@ configure_requires:
 build_requires:
     ExtUtils::MakeMaker:  0
 requires:
-    DateTime:             0.4302
-    DateTime::Format::DateParse:  0.04
-    DateTime::Format::Flexible:  0.05
-    DateTime::Format::Natural:  0.71
-    DateTime::Locale:     0.4001
-    DateTime::TimeZone:   0.95
-    DateTimeX::Easy:      0.082
-    Moose:                0.41
-    MooseX::Types:        0.04
-    namespace::clean:     0.08
-    Test::Exception:      0.27
-    Test::use::ok:        0.02
-    Time::Duration::Parse:  0.06
+    DateTime:            0.4302
+    DateTime::Locale:    0.4001
+    DateTime::TimeZone:  0.7701
+    Moose:               0.41
+    MooseX::Types:       0.19
+    namespace::clean:    0.08
+    Test::Exception:     0.27
+    Test::use::ok:       0.02
 no_index:
     directory:
         - t
         - inc
-generated_by:       ExtUtils::MakeMaker version 6.55_02
+generated_by:       ExtUtils::MakeMaker version 6.52
 meta-spec:
     url:      http://module-build.sourceforge.net/META-spec-v1.4.html
     version:  1.4
