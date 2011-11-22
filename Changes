@@ -1,3 +1,6 @@
+0.06
+        - Use inline_as instead of the deprecated optimize_as
+
 0.05
 		- Merged the two 0.04 releases
 

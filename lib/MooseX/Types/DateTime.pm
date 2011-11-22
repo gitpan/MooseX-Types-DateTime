@@ -5,7 +5,7 @@ package MooseX::Types::DateTime;
 use strict;
 use warnings;
 
-our $VERSION = "0.05";
+our $VERSION = "0.06";
 
 use DateTime ();
 use DateTime::Locale ();
@@ -30,9 +30,9 @@ subtype Locale,   as 'DateTime::Locale';
 subtype( Now,
     as Str,
     where { $_ eq 'now' },
-    Moose::Util::TypeConstraints::optimize_as {
-        no warnings 'uninitialized';
-        !ref($_[0]) and $_[0] eq 'now';
+    Moose::Util::TypeConstraints::inline_as {
+        'no warnings "uninitialized";'.
+        '!ref(' . $_[1] . ') and '. $_[1] .' eq "now"';
     },
 );
 

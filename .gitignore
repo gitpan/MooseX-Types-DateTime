@@ -2,7 +2,7 @@
 !.gitignore
 Makefile*
 !Makefile.PL
-META.yml
+META.*
 blib
 build
 inc
@@ -13,3 +13,4 @@ Debian*
 README
 MooseX-Types-DateTime-*
 *.bs
+MYMETA.*
