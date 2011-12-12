@@ -19,13 +19,15 @@ no_index:
     - inc
 requires:
   DateTime: 0.4302
+  DateTime::Duration: 0.4302
   DateTime::Locale: 0.4001
   DateTime::TimeZone: 0.95
-  Moose: 2.0100
-  MooseX::Types: 0.19
+  Moose: 0.41
+  MooseX::Types: 0.30
+  MooseX::Types::Moose: 0.30
   Test::Exception: 0.27
   Test::use::ok: 0.02
   namespace::clean: 0.08
 resources:
   repository: git://git.moose.perl.org/MooseX-Types-DateTime.git
-version: 0.06
+version: 0.07

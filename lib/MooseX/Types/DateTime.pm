@@ -5,17 +5,19 @@ package MooseX::Types::DateTime;
 use strict;
 use warnings;
 
-our $VERSION = "0.06";
+our $VERSION = "0.07";
 
-use DateTime ();
-use DateTime::Locale ();
-use DateTime::TimeZone ();
+use Moose 0.41 ();
+use DateTime 0.4302 ();
+use DateTime::Duration 0.4302 ();
+use DateTime::Locale 0.4001 ();
+use DateTime::TimeZone 0.95 ();
 
-use MooseX::Types::Moose qw/Num HashRef Str/;
+use MooseX::Types::Moose 0.30 qw/Num HashRef Str/;
 
-use namespace::clean;
+use namespace::clean 0.08;
 
-use MooseX::Types -declare => [qw( DateTime Duration TimeZone Locale Now )];
+use MooseX::Types 0.30 -declare => [qw( DateTime Duration TimeZone Locale Now )];
 
 class_type "DateTime";
 class_type "DateTime::Duration";
@@ -30,10 +32,16 @@ subtype Locale,   as 'DateTime::Locale';
 subtype( Now,
     as Str,
     where { $_ eq 'now' },
-    Moose::Util::TypeConstraints::inline_as {
-        'no warnings "uninitialized";'.
-        '!ref(' . $_[1] . ') and '. $_[1] .' eq "now"';
-    },
+    ($Moose::VERSION >= 2.0100
+        ? Moose::Util::TypeConstraints::inline_as {
+           'no warnings "uninitialized";'.
+           '!ref(' . $_[1] . ') and '. $_[1] .' eq "now"';
+        }
+        : Moose::Util::TypeConstraints::optimize_as {
+            no warnings 'uninitialized';
+            !ref($_[0]) and $_[0] eq 'now';
+        }
+    ),
 );
 
 our %coercions = (
