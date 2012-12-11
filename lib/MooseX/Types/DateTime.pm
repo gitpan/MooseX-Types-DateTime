@@ -5,7 +5,7 @@ package MooseX::Types::DateTime;
 use strict;
 use warnings;
 
-our $VERSION = "0.07";
+our $VERSION = "0.08";
 
 use Moose 0.41 ();
 use DateTime 0.4302 ();
@@ -200,14 +200,14 @@ Delegates to L<DateTime::TimeZone/new> with the string as the C<name> argument.
 
 =head1 SEE ALSO
 
-L<MooseX::Types::DateTimeX>
+L<MooseX::Types::DateTime::MoreCoercions>
 
 L<DateTime>, L<DateTimeX::Easy>
 
 =head1 VERSION CONTROL
 
 This module is maintained using git. You can get the latest version from
-L<git://github.com/nothingmuch/moosex-types-datetime.git>.
+L<git://git.moose.perl.org/MooseX-Types-DateTime.git>.
 
 =head1 AUTHOR
 

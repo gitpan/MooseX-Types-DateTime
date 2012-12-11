@@ -9,6 +9,7 @@ WriteMakefile(
     VERSION_FROM => 'lib/MooseX/Types/DateTime.pm',
     INSTALLDIRS  => 'site',
     PL_FILES     => { },
+    MIN_PERL_VERSION => 5.0008003,
     PREREQ_PM => {
         'Moose'              => '0.41', # class_type
         'DateTime'           => '0.4302',
