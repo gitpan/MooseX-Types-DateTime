@@ -1,10 +1,8 @@
-#!/usr/bin/perl
-
 use strict;
 use warnings;
 
-use Test::More 'no_plan';
-use Test::Exception;
+use Test::More;
+use Test::Fatal;
 
 use ok 'MooseX::Types::DateTime';
 
@@ -36,7 +34,7 @@ isa_ok( find_type_constraint($_), "Moose::Meta::TypeConstraint" ) for qw(DateTim
 
     isa_ok( Foo->new( date => 'now' )->date, "DateTime" );
 
-    throws_ok { Foo->new( date => "junk1!!" ) } qr/DateTime/, "constraint";
+    like(exception { Foo->new( date => "junk1!!" ) }, qr/DateTime/, "constraint");
 }
 
 {
@@ -65,7 +63,7 @@ isa_ok( find_type_constraint($_), "Moose::Meta::TypeConstraint" ) for qw(DateTim
 
     isa_ok( Quxx->new( duration => { minutes => 2 } )->duration, "DateTime::Duration", "coerced from hash" );
 
-    throws_ok { Quxx->new( duration => "ahdstkljhat" ) } qr/DateTime/, "constraint";
+    like(exception { Quxx->new( duration => "ahdstkljhat" ) }, qr/DateTime/, "constraint");
 }
 
 {
@@ -86,7 +84,7 @@ isa_ok( find_type_constraint($_), "Moose::Meta::TypeConstraint" ) for qw(DateTim
 
     like( $tz->name, qr/^Africa/, "correct time zone" );
 
-    dies_ok { Bar->new( time_zone => "Space/TheMoon" ) } "bad time zone";
+    like(exception { Bar->new( time_zone => "Space/TheMoon" ) }, qr{The timezone 'Space/TheMoon' could not be loaded}, "bad time zone");
 }
 
 {
@@ -105,7 +103,7 @@ isa_ok( find_type_constraint($_), "Moose::Meta::TypeConstraint" ) for qw(DateTim
 
     isa_ok( $loc, "DateTime::Locale::he", "coerced from string" );
 
-    dies_ok { Gorch->new( loc => "not_a_place_or_a_locale" ) } "bad locale name";
+    like(exception { Gorch->new( loc => "not_a_place_or_a_locale" ) }, qr/Invalid locale/, "bad locale name");
 
     SKIP: {
         skip "No Locale::Maketext", 2 unless eval { require Locale::Maketext };
@@ -138,7 +136,7 @@ isa_ok( find_type_constraint($_), "Moose::Meta::TypeConstraint" ) for qw(DateTim
         use MooseX::Types::DateTime qw(DateTime Duration);
 
         has 'date' => (is=>'rw', isa=>DateTime, coerce=>1);
-        has 'duration' => (is=>'rw', isa=>Duration, coerce=>1);	
+        has 'duration' => (is=>'rw', isa=>Duration, coerce=>1);
 
     }
 
@@ -148,3 +146,5 @@ isa_ok( find_type_constraint($_), "Moose::Meta::TypeConstraint" ) for qw(DateTim
     => 'Instantiated object using export types';
 
 }
+
+done_testing;
