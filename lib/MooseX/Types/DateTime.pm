@@ -2,8 +2,8 @@ package MooseX::Types::DateTime;
 BEGIN {
   $MooseX::Types::DateTime::AUTHORITY = 'cpan:NUFFIN';
 }
-# git description: MooseX-Types-DateTime-0.06-18-g336ac0e
-$MooseX::Types::DateTime::VERSION = '0.09';
+# git description: v0.09-1-ga15a07a
+$MooseX::Types::DateTime::VERSION = '0.10';
 
 use strict;
 use warnings;
@@ -17,7 +17,7 @@ use DateTime::TimeZone 0.95 ();
 
 use MooseX::Types::Moose 0.30 qw/Num HashRef Str/;
 
-use namespace::autoclean;
+use namespace::clean 0.08;
 
 use MooseX::Types 0.30 -declare => [qw( DateTime Duration TimeZone Locale Now )];
 
@@ -95,7 +95,7 @@ Moose
 
 =head1 VERSION
 
-version 0.09
+version 0.10
 
 =head1 SYNOPSIS
 

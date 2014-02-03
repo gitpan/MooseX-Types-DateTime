@@ -1,5 +1,9 @@
 Revision history for MooseX-Types-DateTime
 
+0.10      2014-02-03 17:17:57Z
+        - temporarily revert change that cleaned namespaces (0.09), until the
+          logic is cleaned up in MooseX::Types itself
+
 0.09      2014-02-03 02:16:30Z
         - Require perl 5.8.3, as Moose does
         - canonical repository moved to github moose organization

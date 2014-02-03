@@ -31,7 +31,7 @@ no_index:
 provides:
   MooseX::Types::DateTime:
     file: lib/MooseX/Types/DateTime.pm
-    version: '0.09'
+    version: '0.10'
 requires:
   DateTime: '0.4302'
   DateTime::Duration: '0.4302'
@@ -40,7 +40,7 @@ requires:
   Moose: '0.41'
   MooseX::Types: '0.30'
   MooseX::Types::Moose: '0.30'
-  namespace::autoclean: '0'
+  namespace::clean: '0.08'
   perl: '5.008003'
   strict: '0'
   warnings: '0'
@@ -50,7 +50,7 @@ resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=MooseX-Types-DateTime
   homepage: https://github.com/moose/MooseX-Types-DateTime
   repository: https://github.com/moose/MooseX-Types-DateTime.git
-version: '0.09'
+version: '0.10'
 x_Dist_Zilla:
   perl:
     version: '5.019007'

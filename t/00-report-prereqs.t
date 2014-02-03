@@ -85,7 +85,7 @@ my $static_prereqs = do { my $x = {
                                       'Moose' => '0.41',
                                       'MooseX::Types' => '0.30',
                                       'MooseX::Types::Moose' => '0.30',
-                                      'namespace::autoclean' => '0',
+                                      'namespace::clean' => '0.08',
                                       'perl' => '5.008003',
                                       'strict' => '0',
                                       'warnings' => '0'

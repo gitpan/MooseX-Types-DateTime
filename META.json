@@ -64,7 +64,7 @@
             "Moose" : "0.41",
             "MooseX::Types" : "0.30",
             "MooseX::Types::Moose" : "0.30",
-            "namespace::autoclean" : "0",
+            "namespace::clean" : "0.08",
             "perl" : "5.008003",
             "strict" : "0",
             "warnings" : "0"
@@ -91,7 +91,7 @@
    "provides" : {
       "MooseX::Types::DateTime" : {
          "file" : "lib/MooseX/Types/DateTime.pm",
-         "version" : "0.09"
+         "version" : "0.10"
       }
    },
    "release_status" : "stable",
@@ -109,7 +109,7 @@
       "x_IRC" : "irc://irc.perl.org/#moose",
       "x_MailingList" : "http://lists.perl.org/list/moose.html"
    },
-   "version" : "0.09",
+   "version" : "0.10",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.019007"
